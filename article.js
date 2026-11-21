@@ -1,10 +1,10 @@
 document.title = "A two-color print run";
 document.getElementById("article").innerHTML = `<article>
   <h1>A two-color print run</h1>
-  <p class="intro">Two scraps of card can save a whole stack of crooked prints. Use them to line up the paper for a second color.</p>
+  <p class="intro">When you print a second color, the paper has to go back in exactly the same spot. Two strips of cardboard make a simple guide.</p>
   <nav aria-label="On this page"><a href="#paper">Line up the paper</a> · <a href="#ink">Add the second color</a></nav>
   <h2 id="paper">Line up the paper</h2>
-  <p>Lay a sheet on the table. Tape one strip of card along its top edge and another along the left. Slide each fresh sheet into that corner before you print.</p>
+  <p>Lay a sheet on the table. Tape the strips to the table, one along the top edge of the paper and one along the left. Slide each fresh sheet into that corner before you print.</p>
   <h2 id="ink">Add the second color</h2>
   <p>Print the lighter ink first. When it’s dry, slide a test sheet back into the corner and print the darker layer. Check where the colors meet before you run the rest.</p>
 </article>`;

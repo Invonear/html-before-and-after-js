@@ -13,8 +13,8 @@ function updatePreview() {
   // Sandbox changes take effect on navigation. Reload the actual example.
   scriptedPreview.src = "rendered.html";
   observation.textContent = enabled
-    ? "Both previews now show the same article. The script added the headline, text and links to the second page."
-    : "The first page already has a headline and two links. The second preview is empty because the article lives in a script.";
+    ? "The second page now has the same headline, paragraphs and two section links as the first."
+    : "The second preview is blank. Choose “Run JavaScript” to load its article.";
 }
 modePicker.addEventListener("change", updatePreview);
 window.addEventListener("pageshow", updatePreview);

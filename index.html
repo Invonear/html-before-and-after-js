@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Can a crawler read the article? · VisibleScan</title>
-  <meta name="description" content="Compare two pages that look identical. Switch JavaScript on and off to see what each page sends in its original HTML.">
+  <meta name="description" content="Read the same printmaking article two ways and see which parts a crawler can find before JavaScript runs.">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="style.css">
   <script src="comparison.js" defer></script>
@@ -13,26 +13,28 @@
   <main class="guide">
     <header class="hero">
       <h1>Can a crawler read the article?</h1>
-      <p class="intro">These two pages look identical in a browser. Only one sends the article in its HTML. Switch JavaScript on to see the other one fill in.</p>
-      <a class="report-link" href="https://visiblescan.com/sample-report">See a VisibleScan sample report <span aria-hidden="true">↗</span></a>
+      <div>
+        <p class="intro">Open either page in a browser and you’ll see the same article about printmaking. A crawler that skips JavaScript gets the full text from the first page and none from the second.</p>
+        <a class="report-link" href="https://visiblescan.com/sample-report">View a VisibleScan sample report <span aria-hidden="true">↗</span></a>
+      </div>
     </header>
 
     <section class="experiment" aria-labelledby="compare">
-      <h2 id="compare">Compare the pages</h2>
+      <h2 id="compare">Try the two versions</h2>
       <fieldset id="mode" hidden>
         <legend>Preview mode</legend>
         <label><input type="radio" name="mode" value="off" checked> HTML only</label>
         <label><input type="radio" name="mode" value="on"> Run JavaScript</label>
       </fieldset>
-      <p id="observation" aria-live="polite">The first page already has a headline and two links. The second preview is empty because the article lives in a script.</p>
+      <p id="observation" aria-live="polite">The second preview is blank because its article is supplied by a script.</p>
       <div class="previews">
         <section>
-          <h3>Article in the HTML</h3>
+          <h3>Written in HTML</h3>
           <iframe src="initial.html" sandbox="allow-same-origin" title="Preview of the article sent in HTML"></iframe>
           <a href="initial.html">Open the HTML page <span aria-hidden="true">→</span></a>
         </section>
         <section>
-          <h3>Article added by a script</h3>
+          <h3>Loaded by JavaScript</h3>
           <iframe src="rendered.html" sandbox="allow-same-origin" title="Preview of the article added by JavaScript"></iframe>
           <a href="rendered.html">Open the JavaScript page <span aria-hidden="true">→</span></a>
         </section>
@@ -40,9 +42,9 @@
     </section>
 
     <section class="reading">
-      <h2>What changes?</h2>
+      <h2>What’s in the original HTML?</h2>
       <table>
-        <caption>What each page sends before JavaScript runs</caption>
+        <caption class="sr-only">Titles, headings and links before JavaScript runs</caption>
         <thead><tr><th scope="col">Look for</th><th scope="col">HTML page</th><th scope="col">JavaScript page</th></tr></thead>
         <tbody>
           <tr><th scope="row">Tab title</th><td>A two-color print run</td><td>Print notes</td></tr>
@@ -51,16 +53,18 @@
         </tbody>
       </table>
       <details>
-        <summary>Check the evidence yourself</summary>
-        <p>Open either page above and choose <strong>View Page Source</strong>. Search for “Print the lighter ink first.” Only the HTML page contains that sentence. Now open <strong>Inspect → Elements</strong> with JavaScript enabled. The sentence is there on both pages.</p>
+        <summary>Where to find the difference in your browser</summary>
+        <p>Open each example in its own tab. Choose <strong>View Page Source</strong> and search for “Print the lighter ink first.” You’ll find it only in the HTML version. With JavaScript on, open the <strong>Elements</strong> panel in your browser’s developer tools. There you can find the sentence on both pages.</p>
       </details>
     </section>
 
     <section class="takeaway">
-      <h2>Try it on a page you own</h2>
-      <p>Pick a product page or an article. Check whether its name, main description and most useful link arrive with the HTML. If a script supplies them later, a reader that skips the script will miss them.</p>
-      <a class="action" href="https://visiblescan.com/">Check a URL with VisibleScan <span aria-hidden="true">↗</span></a>
-      <p class="further">Found a gap? <a href="https://visiblescan.com/guides/javascript-and-ai-readability">Read the guide to JavaScript and crawler access.</a></p>
+      <h2>What about your site?</h2>
+      <div>
+        <p>Take a product page. Can you find the product name, price and description in its source? If the price appears only after JavaScript runs, a crawler that skips the script will miss that price.</p>
+        <a class="action" href="https://visiblescan.com/">Check a URL with VisibleScan <span aria-hidden="true">↗</span></a>
+        <p class="further"><a href="https://visiblescan.com/guides/javascript-and-ai-readability">How crawlers handle JavaScript</a></p>
+      </div>
     </section>
     <footer><a href="https://github.com/Invonear/html-before-and-after-js">View the source files on GitHub</a></footer>
   </main>
