@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One article, two ways to load it</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="guide">
+    <h1>One article, two ways to load it</h1>
+    <p class="intro">Both pages show the same short guide to printmaking. Open each one, then use <strong>View Page Source</strong> and look for “Print the lighter ink first.”</p>
+    <div class="pair">
+      <section>
+        <h2>HTML</h2>
+        <p>The server sends the article with the page. You can read it with JavaScript turned off.</p>
+        <a href="initial.html">Open the HTML version <span aria-hidden="true">→</span></a>
+      </section>
+      <section>
+        <h2>JavaScript</h2>
+        <p>The server sends an empty article container. A script fills it in after the page arrives.</p>
+        <a href="rendered.html">Open the JavaScript version <span aria-hidden="true">→</span></a>
+      </section>
+    </div>
+    <h2>Why do they look the same?</h2>
+    <p>View Page Source shows the HTML your browser received. <strong>Inspect → Elements</strong> shows the page after the browser has run its scripts. You’ll find the sentence in Elements on both pages.</p>
+    <p>A reader that only fetches HTML gets the article on the first page. A reader that runs the script can get it on both.</p>
+    <footer><a href="https://visiblescan.com/sample-report">See a VisibleScan sample report</a> · <a href="https://visiblescan.com/guides/javascript-and-ai-readability">Read the JavaScript guide</a> · <a href="https://github.com/Invonear/html-before-and-after-js">Source on GitHub</a></footer>
+  </main>
+</body>
+</html>
