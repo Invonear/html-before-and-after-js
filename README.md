@@ -2,7 +2,7 @@
 
 Open these two pages in a browser and you’ll see the same guide to making a two-color print. The difference is how the words get there. One page sends the article in its HTML. The other sends an empty space and uses JavaScript to fill it.
 
-**[Try the two versions](https://invonear.github.io/html-before-and-after-js/)** · **[View a VisibleScan sample report](https://visiblescan.com/sample-report)**
+**[Try the two versions](https://invonear.github.io/html-before-and-after-js/)** · **[See VisibleScan’s sample SEO and GEO report](https://visiblescan.com/sample-report)**
 
 ## Try it in your browser
 
@@ -25,6 +25,12 @@ In [the first file](initial.html), you can read the article right in the markup.
 ```
 
 [The script](article.js) fills that element with the article and updates the tab title. Open the **Elements** panel in your browser’s developer tools after the page loads and you’ll see the paragraphs the script added.
+
+## Where SEO and GEO come in
+
+For technical SEO (search engine optimization), try following the two section links in the original HTML. You can do that on the first page. On the second, a crawler has to run the script to discover them.
+
+For GEO (generative engine optimization), try a question instead. Which ink goes on first? The first page gives the answer in plain HTML. A system that fetches only the second page’s HTML gets no answer from that page. Whether an AI service cites either page is a separate question.
 
 ## Check a page of your own
 
